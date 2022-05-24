@@ -2,4 +2,4 @@
 let incr = 10,
     decr = 10;
 
-console.log(incr++, decr--);
+alert(`our number = 10. Increment - ${++incr}, decrement - ${--decr}`);
