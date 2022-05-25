@@ -16,11 +16,30 @@ const personalMovieDB = {
 console.log(personalMovieDB);
 console.log(`///////////////////`);
 
-let filmName1 = prompt("One of the latest film?","");
-let ratefilmName1 = prompt("How would you rate it?","");
-let filmName2 = prompt("One of the latest film?","");
-let ratefilmName2 = prompt("How would you rate it?","");
-const movies = {};
-personalMovieDB.movies[filmName1] = ratefilmName1;
-personalMovieDB.movies[filmName2] = ratefilmName2;
+// task 3
+
+ for (let i = 0; i < 2; i++) {
+    let filmName = prompt("One of the latest film?", ""),
+        ratefilmName = prompt("How would you rate it?", "");
+    
+    if (filmName != null && filmName != '' &&
+         ratefilmName != null && ratefilmName != ''&& filmName.length < 50){
+
+        personalMovieDB.movies[filmName] = ratefilmName;
+    } else {
+        i--;
+    }
+}
+
 console.log(personalMovieDB);
+console.log(`///////////////////`);
+
+if (personalMovieDB.count < 10) {
+    alert('You watched not much films');
+} else if (personalMovieDB.count >=10 && personalMovieDB.count <= 30) {
+    alert('You are classic viewer');
+} else if (personalMovieDB.count > 30) {
+    alert('You are kinoman');
+} else {
+    alert('An error occurd');
+}
