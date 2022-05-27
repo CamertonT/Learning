@@ -31,8 +31,8 @@ const personalMovieDB = {
 
 function rememberMyFilms () {
     for (let i = 0; i < 2; i++) {
-        let filmName = prompt("One of the latest film?", ""),
-            ratefilmName = prompt("How would you rate it?", "");
+        let filmName = prompt("One of the latest film?", "").trim(),
+            ratefilmName = prompt("How would you rate it?", "").trim();
         
         if (filmName != null && filmName != '' &&
              ratefilmName != null && ratefilmName != ''&& filmName.length < 50){
